@@ -1,92 +1,418 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Website</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body class="dark">
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
-    </div>
-    <div id="loading-cover" style="display:none;">
-      <div id="unity-loading-bar">
-        <div id="unity-logo"><img src="logo.png"></div>
-        <div id="unity-progress-bar-empty" style="display: none;">
-          <div id="unity-progress-bar-full"></div>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NatYeah</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <!-- Demo buttons for testing (if needed, use window.openModal('work1') etc in console)
+  <div class="demo-buttons" style="display: none;">
+    <button class="demo-button" data-modal="work1">Work 1</button>
+    <button class="demo-button" data-modal="work2">Work 2</button>
+    <button class="demo-button" data-modal="work3">Work 3</button>
+    <button class="demo-button" data-modal="work4">Work 4</button>
+    <button class="demo-button" data-modal="work5">Work 5</button>
+    <button class="demo-button" data-modal="about">About</button>
+    <button class="demo-button" data-modal="contact">Contact</button>
+  </div> -->
+
+  <!-- Work 1 Modal - Lidl Pfand ID -->
+  <div class="work1 modal">
+    <button class="modal-exit-button">×</button>
+    <div class="work-modal-container">
+      <div class="logo-column">
+        <div class="header">
+          <h1 class="brand-name">NATIA<br>KALANDIA</h1>
+          <p class="tagline">Personality hire copywriter</p>
         </div>
-        <div class="spinner"></div>
+
+        <div class="project-content">
+          <h2 class="project-title">N26<br>banking you way</h2>
+
+          <p class="project-description">
+            N26 is a digital bank that offers a seamless banking experience. It's a bank that you can use to manage your
+            money, pay your bills, and invest your money.
+          </p>
+
+          <p class="project-description">
+            N26 is a digital bank that offers a seamless banking experience. It's a bank that you can use to manage your
+            money, pay your bills, and invest your money.
+          </p>
+
+          <div class="credits">
+            <div class="credit-item">Copywriter: Natia Kalandia</div>
+            <div class="credit-item">Art Director: Anya Zainieva</div>
+            <div class="credit-item">Creative Director: luca pristerbach, passcal momper</div>
+            <div class="credit-item">Agency: Potvis</div>
+          </div>
+
+        </div>
+
+        <div class="navigation">
+          <button class="nav-arrow">←</button>
+          <button class="nav-arrow">→</button>
+        </div>
+      </div>
+
+      <div class="media-column">
+        <div class="media-grid">
+          <div class="media-item">
+            <img src="/works/Work1_P1.png" alt="Text">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work1_P2.png" alt="Text">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work1_P3.png" alt="Text">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work1_P4.png" alt="Text">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work1_P5.png" alt="Text">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work1_P6.png" alt="Text">
+          </div>
+        </div>
       </div>
     </div>
-    <div id="unity-fullscreen-button" style="display: none;"></div>
-    <script>
-      const hideFullScreenButton = "1";
-      const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/Test_5.loader.js";
-      const config = {
-        dataUrl: buildUrl + "/Test_5.data.unityweb",
-        frameworkUrl: buildUrl + "/Test_5.framework.js.unityweb",
-        codeUrl: buildUrl + "/Test_5.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Website",
-        productVersion: "0.1.0",
-      };
+  </div>
 
-      const container = document.querySelector("#unity-container");
-      const canvas = document.querySelector("#unity-canvas");
-      const loadingCover = document.querySelector("#loading-cover");
-      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-      const progressBarFull = document.querySelector("#unity-progress-bar-full");
-      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      const spinner = document.querySelector('.spinner');
+  <!-- Work 2 Modal - Project Alpha -->
+  <div class="work2 modal">
+    <button class="modal-exit-button">×</button>
+    <div class="work-modal-container">
+      <div class="logo-column">
+        <div class="header">
+          <h1 class="brand-name">NATIA<br>KALANDIA</h1>
+          <p class="tagline">Personality hire copywriter</p>
+        </div>
 
-      const canFullscreen = (function() {
-        for (const key of [
-            'exitFullscreen',
-            'webkitExitFullscreen',
-            'webkitCancelFullScreen',
-            'mozCancelFullScreen',
-            'msExitFullscreen',
-          ]) {
-          if (key in document) {
-            return true;
-          }
-        }
-        return false;
-      }());
+        <div class="project-content">
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-      }
-      loadingCover.style.display = "";
+          <h2 class="project-title"> PLASTIC FISCHER</h2>
 
-      const script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          spinner.style.display = "none";
-          progressBarEmpty.style.display = "";
-          progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
-          loadingCover.style.display = "none";
-          if (canFullscreen) {
-            if (!hideFullScreenButton) {
-              fullscreenButton.style.display = "";
-            }
-            fullscreenButton.onclick = () => {
-              unityInstance.SetFullscreen(1);
-            };
-          }
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
+          <p class="project-description">
+            This campaign tells the story of an environmental hero pushed to his breaking point. Through a staged viral
+            video, the CEO of Plastic Fischer appears to sabotage his own mission, fed up with public apathy.
+          </p>
+
+          <p class="project-description">
+            This provocative narrative is designed to shatter indifference and drive donations by asking one simple
+            question: what will it take to finally clean the rivers?
+          </p>
+
+          <div class="credits">
+            <div class="credit-item">Copywriter: Natia Kalandia</div>
+            <div class="credit-item">Art Director: Anya Zainieva</div>
+            <div class="credit-item">Creative Director: luca pristerbach, passcal momper</div>
+            <div class="credit-item">Agency: Potvis</div>
+          </div>
+
+
+        </div>
+
+        <div class="navigation">
+          <button class="nav-arrow">←</button>
+          <button class="nav-arrow">→</button>
+        </div>
+      </div>
+
+      <div class="media-column">
+        <div class="media-grid">
+          <div class="media-item">
+            <img src="/works/Work2_P1.png" alt="Project Alpha hero image">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work2_P2.png" alt="User interface design">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work 3 Modal - Digital Innovation -->
+  <div class="work3 modal">
+    <button class="modal-exit-button">×</button>
+    <div class="work-modal-container">
+      <div class="logo-column">
+        <div class="header">
+          <h1 class="brand-name">NATIA<br>KALANDIA</h1>
+          <p class="tagline">Personality hire copywriter</p>
+        </div>
+
+        <div class="project-content">
+          <h2 class="project-title">NORSE PROJECT</h2>
+
+          <p class="project-description">
+            Through shifting seasons and changing skies. From a breezy spring walk to a sudden autumn downpour or the
+            first snow of winter, a Norse Projects hat is your constant companion. Designed for life's moments, no
+            matter the weather.
+
+          </p>
+
+
+
+          <div class="credits">
+            <div class="credit-item">Copywriter: Natia Kalandia</div>
+            <div class="credit-item">Art Director: Anya Zainieva</div>
+            <div class="credit-item">Creative Director: luca pristerbach, passcal momper</div>
+            <div class="credit-item">Agency: Potvis</div>
+          </div>
+
+        </div>
+
+        <div class="navigation">
+          <button class="nav-arrow">←</button>
+          <button class="nav-arrow">→</button>
+        </div>
+      </div>
+
+      <div class="media-column">
+        <div class="media-grid">
+          <div class="media-item">
+            <img src="/works/Work3_P1.png" alt="Digital innovation concept">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work3_P2.png" alt="Interactive demo">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work3_P3.png" alt="Technology implementation">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work3_P4.png" alt="User journey mapping">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work3_P5.png" alt="User journey mapping">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work3_P6.png" alt="User journey mapping">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work 4 Modal - Brand Activation -->
+  <div class="work4 modal">
+    <button class="modal-exit-button">×</button>
+    <div class="work-modal-container">
+      <div class="logo-column">
+        <div class="header">
+          <h1 class="brand-name">NATIA<br>KALANDIA</h1>
+          <p class="tagline">Personality hire copywriter</p>
+        </div>
+
+        <div class="project-content">
+          <h2 class="project-title">DR. Martens<br>It's just gonna hurt a little</h2>
+
+          <p class="project-description">
+            Dr. Martens 1460 is one of the iconic shoes there is. It comes with instant recognition and style approval
+            as well. That’s why it’s worn equally successfully by almost every demographic representative. You either
+            own one or want to own one. But what I’m gonna say next is gonna hurt a little.
+          </p>
+
+
+
+          <div class="credits">
+            <div class="credit-item">Copywriter: Natia Kalandia</div>
+
+          </div>
+
+        </div>
+
+        <div class="navigation">
+          <button class="nav-arrow">←</button>
+          <button class="nav-arrow">→</button>
+        </div>
+      </div>
+
+      <div class="media-column">
+        <div class="media-grid">
+          <div class="media-item">
+            <img src="/works/Work4_P1.png" alt="Brand activation event">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work4_P2.png" alt="Experiential setup">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work 5 Modal - Creative Campaign -->
+  <div class="work5 modal">
+    <button class="modal-exit-button">×</button>
+    <div class="work-modal-container">
+      <div class="logo-column">
+        <div class="header">
+          <h1 class="brand-name">NATIA<br>KALANDIA</h1>
+          <p class="tagline">Personality hire copywriter</p>
+        </div>
+
+        <div class="project-content">
+          <h2 class="project-title">IKEA<br>Beyond trends</h2>
+
+          <p class="project-description">
+            Great design transcends trends. To prove the enduring versatility of IKEA's most beloved products, our
+            "Beyond Trends" project used Midjourney to filter them through history's greatest art styles. This visual
+            experiment confirms that IKEA's design doesn't just cater to one aesthetic—it can embody them all. </p>
+
+
+          <div class="credits">
+            <div class="credit-item">Copywriter: Natia Kalandia</div>
+          </div>
+
+        </div>
+
+        <div class="navigation">
+          <button class="nav-arrow">←</button>
+          <button class="nav-arrow">→</button>
+        </div>
+      </div>
+
+      <div class="media-column">
+        <div class="media-grid">
+          <div class="media-item">
+            <img src="/works/Work5_P2.png" alt="Key visual design">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work5_P3.png" alt="Campaign rollout">
+          </div>
+          <div class="media-item">
+            <img src="/works/Work5_P4.png" alt="Campaign results">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Modal -->
+  <div class="about modal">
+    <button class="modal-exit-button">×</button>
+
+    <!-- Floating Images -->
+    <div class="floating-images">
+      <!-- Background layer -->
+      <div class="floating-image background-layer" data-speed="0.6">
+        <img src="/works/AboutMe/building.png" alt="Building">
+      </div>
+      <div class="floating-image foreground-layer" data-speed="0.5">
+        <img src="/works/AboutMe/NatiassBoyfriend.png" alt="Natia's Boyfriend">
+      </div>
+    
+      <div class="floating-image foreground-layer" data-speed="0.3">
+        <img src="/works/AboutMe/medusa.png" alt="Medusa">
+      </div>
+      <div class="floating-image background-layer" data-speed="0.4">
+        <img src="/works/AboutMe/Book.png" alt="Books">
+      </div>
+
+      <!-- Main layer -->
+      <div class="floating-image main-layer" data-speed="0.2">
+        <img src="/works/AboutMe/Natia.png" alt="Natia" class="main-portrait">
+      </div>
+
+      <!-- Foreground layer -->
+      <div class="floating-image foreground-layer" data-speed="0.1">
+        <img src="/works/AboutMe/blueBerry.png" alt="Blue Berry">
+      </div>
+     
+     
+      <div class="floating-image background-layer" data-speed="0.0">
+        <img src="/works/AboutMe/star.png" alt="Star">
+      </div>
+    </div>
+
+    <div class="about-content">
+      <h1>Hallo there!  </h1>
+      <h2>I’m Natia.  </h2>
+      <p>Growing up, I was always told that I had a perfect voice for public speaking and I should have kept it in mind for my future career. I choose copywriting instead, and ever since my mom is trying to figure out what it is, that I actually do. 
+        It takes approximately 7 minutes to figure out that I’m an only child and, for some—even - even less, that I’m a March Pisces. So far I can’t figure out what’s my tell. 
+        Even though I’ve been rocking Resting B*tch face ever since preschool, I know for a fact that I’m a major personality hire, besides my talents.
+        I have no regrets, but I'll always be bitter that I'll never write anything as perfect as 'The Free Churro' monologue from Bojack Horseman. </p>
+      
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="contact modal">
+    <button class="modal-exit-button">×</button>
+    <h1 class="modal-title">Contact</h1>
+    <h2>Let's Create Something Amazing</h2>
+    <p>Ready to bring your ideas to life? I'm always excited to collaborate on projects that make a difference.</p>
+    <p>Email: chris@example.com<br>
+      LinkedIn: /in/christsirigotis<br>
+      Phone: +49 xxx xxx xxxx</p>
+  </div>
+
+  <!-- Loading Modal -->
+  <div id="loading-modal" class="loading-modal">
+    <div class="loading-content">
+      <h1 id="loading-text">Who's there?</h1>
+    </div>
+  </div>
+
+  <!-- Enter Modal -->
+  <div class="enter modal">
+
+    <div class="enter-content">
+      <button class="enter-button" onclick="closeModal()">ENTER</button>
+    </div>
+  </div>
+
+
+  <!-- Gallery Modal -->
+  <div class="gallery modal">
+    <button class="modal-exit-button">×</button>
+
+    <div class="container">
+      <div class="tile">
+        <img src="/works/Extra/E_1.png" alt="">
+      </div>
+      <div class="tile">
+        <img src="/works/Extra/E_2.png" alt="">
+      </div>
+      <div class="tile">
+        <img src="/works/Extra/E_3.png" alt="">
+      </div>
+      <div class="tile">
+        <img src="/works/Extra/E_4.png" alt="">
+      </div>
+      <div class="tile">
+        <img src="/works/Extra/E_5.png" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Home Button -->
+  <button id="home-button" class="home-button">
+    <img src="https://img.icons8.com/material-rounded/24/000000/home.png" alt="Home" />
+
+  </button>
+
+  <!-- Dark Mode Toggle Button -->
+  <button id="dark-mode-button" class="dark-mode-button">
+    <img src="https://img.icons8.com/ios-filled/24/000000/light-on.png" alt="Theme Toggle" />
+  </button>
+
+  <div id="experience">
+    <canvas id="experience-canvas" class="experience-canvas"></canvas>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
