@@ -1,15 +1,16 @@
-# Three.js Interactive Globe Portfolio
+# Three.js Interactive Desk Portfolio
 
-A modern, interactive 3D globe experience built with Three.js, inspired by the Shopify BFCM globe.
+A modern, interactive 3D desk workspace built with Three.js. Explore a virtual desk with clickable objects, hover effects, and detailed information modals.
 
 ## Features
 
-- 🌍 Interactive 3D globe with custom shaders
-- ✨ Particle system with ambient animations
-- 🎨 Gradient materials and fresnel effects
-- 🎮 Orbital controls with auto-rotation
-- 📱 Fully responsive design
-- ♿ Accessibility features (keyboard navigation, reduced motion)
+- 🖥️ Interactive 3D desk scene with realistic objects
+- 🎯 Hover effects with outline highlighting
+- 💬 Tooltip that follows cursor showing object names
+- 📱 Click objects to open detailed information modals
+- 📝 Editable object data via JSON files
+- 🎨 Dynamic camera that follows mouse movement
+- 🌟 Realistic lighting and shadows
 - 🎯 Clean, modular architecture
 
 ## Project Structure
@@ -18,50 +19,105 @@ A modern, interactive 3D globe experience built with Three.js, inspired by the S
 K4kh4.github.io/
 ├── index.html              # Main HTML entry point
 ├── styles/
-│   └── main.css           # All styling (reset, layout, animations)
+│   └── main.css           # Complete styling (tooltip, modal, animations)
 ├── js/
 │   ├── main.js            # Application initialization & animation loop
-│   ├── components/
-│   │   ├── Globe.js       # 3D globe with wireframe & dots
-│   │   ├── Particles.js   # Ambient particle system
-│   │   └── Lights.js      # Scene lighting setup
+│   ├── scene/
+│   │   ├── Scene.js       # Scene setup
+│   │   ├── Camera.js      # Camera configuration
+│   │   ├── Renderer.js    # WebGL renderer setup
+│   │   └── Lights.js      # Lighting setup
+│   ├── objects/
+│   │   ├── Desk.js        # Main desk and layout
+│   │   ├── Monitor.js     # Monitor object
+│   │   ├── Keyboard.js    # Keyboard object
+│   │   ├── Mouse.js       # Mouse object
+│   │   ├── Phone.js       # Phone object
+│   │   ├── Notebook.js    # Notebook object
+│   │   └── Wall.js        # Wall with posters
+│   ├── interactions/
+│   │   └── InteractionManager.js  # Raycasting & hover effects
+│   ├── ui/
+│   │   └── UIManager.js   # Tooltip & modal management
 │   └── utils/
 │       └── helpers.js     # Utility functions
-├── assets/                # (Reserved for future images/models)
+├── data/
+│   └── objects.json       # Object details (EDIT THIS!)
 └── README.md              # This file
 ```
 
 ## Getting Started
 
-### Option 1: Quick Start (No Build Required)
+### Prerequisites
 
-Simply open `index.html` in a modern web browser. The project uses ES modules and CDN imports for Three.js, so no build step is needed.
+- Node.js 16+ and npm
 
-### Option 2: Local Development Server
+### Installation
 
-For a better development experience, use a local server:
+1. Clone or download this repository
+2. Install dependencies:
 
 ```bash
-# Using Python 3
-python -m http.server 8000
-
-# Using Node.js (http-server)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
+npm install
 ```
 
-Then visit `http://localhost:8000` in your browser.
+### Development
+
+Start the development server with hot reload:
+
+```bash
+npm run dev
+```
+
+This will open the project at `http://localhost:3000` with automatic browser refresh on file changes.
+
+### Build for Production
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist/` folder.
+
+### Preview Production Build
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
 
 ## Usage
 
-- **Click and Drag**: Rotate the globe
-- **Scroll**: Zoom in/out
-- **Play/Pause Button**: Toggle animation
-- **Auto-Rotation**: Enabled by default
+- **Move Mouse**: Camera follows your cursor movement
+- **Hover Objects**: See object name in tooltip and outline effect
+- **Click Objects**: Open detailed information modal
+- **ESC Key**: Close modal
+- **Click Outside Modal**: Close modal
 
 ## Customization
+
+### Edit Object Details
+
+All object information is stored in `data/objects.json`. Edit this file to update:
+- Titles and descriptions
+- Specifications
+- Links
+
+```json
+{
+  "monitor": {
+    "title": "Monitor",
+    "description": "Your description here",
+    "specs": [
+      { "label": "Resolution", "value": "2560 x 1440" }
+    ],
+    "link": { "text": "View Specs", "url": "#" }
+  }
+}
+```
 
 ### Colors
 
@@ -71,29 +127,24 @@ Edit CSS variables in `styles/main.css`:
 :root {
   --color-primary: #00ff88;
   --color-secondary: #0066ff;
-  --color-dark: #0a0a0f;
 }
 ```
 
-### Globe Appearance
+### Camera Sensitivity
 
-Modify shader uniforms in `js/components/Globe.js`:
+Adjust in `js/main.js`:
 
 ```javascript
-uniforms: {
-  color1: { value: new THREE.Color(0x0066ff) },
-  color2: { value: new THREE.Color(0x00ff88) },
-}
+const targetX = app.mouse.x * 0.5;  // Change 0.5 to adjust horizontal sensitivity
+const targetY = -app.mouse.y * 0.3; // Change 0.3 to adjust vertical sensitivity
 ```
 
-### Animation Speed
+### Object Positions
 
-Adjust rotation speeds in `js/main.js`:
+Edit object positions in `js/objects/Desk.js`:
 
 ```javascript
-app.globe.rotation.y += delta * 0.1;  // Globe speed
-app.particles.rotation.y -= delta * 0.05;  // Particles speed
-app.controls.autoRotateSpeed = 0.5;  // Auto-rotate speed
+monitor.position.set(0, 0.05, -0.3);  // x, y, z coordinates
 ```
 
 ## Browser Support
@@ -116,17 +167,29 @@ Requires ES6 modules and WebGL support.
 
 MIT License - Feel free to use this project for personal or commercial purposes.
 
+## Interactive Objects
+
+The desk includes:
+- 🖥️ **Monitor** - Your main display
+- ⌨️ **Keyboard** - Mechanical keyboard
+- 🖱️ **Mouse** - Precision gaming mouse
+- 📱 **Phone** - Mobile device
+- 📓 **Notebook** - Paper notebook
+- 🖼️ **Posters** (3x) - Wall decorations
+
+All objects are clickable and have detailed information!
+
 ## Credits
 
-- Inspired by [Shopify BFCM Globe](https://bfcm.shopify.com/)
 - Built with [Three.js](https://threejs.org/)
+- Bundled with [Vite](https://vitejs.dev/)
 - Created by K4kh4
 
 ## Future Enhancements
 
-- [ ] Add data visualization on globe surface
-- [ ] Interactive hotspots/markers
-- [ ] Multiple globe themes
-- [ ] Post-processing effects (bloom, SSAO)
-- [ ] Touch gesture support
-- [ ] Animation timeline controls
+- [ ] Add GLTF model loading for more realistic objects
+- [ ] Implement post-processing effects (bloom, SSAO)
+- [ ] Add background music/ambient sounds
+- [ ] Create multiple desk themes
+- [ ] Add animated transitions between views
+- [ ] Implement touch controls for mobile

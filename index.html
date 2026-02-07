@@ -3,30 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Interactive 3D Globe Portfolio">
+  <meta name="description" content="Interactive 3D Desk Portfolio">
   <title>K4kh4's Portfolio</title>
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
   <!-- Canvas Container -->
   <div id="canvas-container"></div>
 
-  <!-- UI Overlay -->
-  <div class="overlay">
-    <header class="header">
-      <h1 class="title">K4kh4</h1>
-      <p class="subtitle">Interactive 3D Experience</p>
-    </header>
+  <!-- Tooltip that follows cursor -->
+  <div id="tooltip" class="tooltip"></div>
 
-    <div class="controls">
-      <button id="play-pause" class="btn" aria-label="Play/Pause animation">
-        <span id="play-icon">⏸</span>
-      </button>
+  <!-- Modal for object details -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-body"></div>
     </div>
-
-    <footer class="footer">
-      <p>Scroll to explore • Click and drag to rotate</p>
-    </footer>
   </div>
 
   <!-- Loading Screen -->
@@ -35,17 +28,7 @@
     <p class="loading-text">Loading Experience...</p>
   </div>
 
-  <!-- Three.js -->
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
-      }
-    }
-  </script>
-  
   <!-- Main Application -->
-  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>

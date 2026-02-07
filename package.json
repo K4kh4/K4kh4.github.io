@@ -1,0 +1,26 @@
+{
+  "name": "k4kh4-portfolio",
+  "version": "1.0.0",
+  "description": "Interactive 3D Globe Portfolio with Three.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "threejs",
+    "3d",
+    "portfolio",
+    "globe",
+    "webgl"
+  ],
+  "author": "K4kh4",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "three": "^0.161.0"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "monitor": {
+    "title": "Monitor",
+    "description": "My main display where all the magic happens. A high-resolution monitor perfect for coding, designing, and creative work.",
+    "specs": [
+      {
+        "label": "Resolution",
+        "value": "2560 x 1440"
+      },
+      {
+        "label": "Size",
+        "value": "27 inches"
+      },
+      {
+        "label": "Refresh Rate",
+        "value": "144Hz"
+      },
+      {
+        "label": "Panel Type",
+        "value": "IPS"
+      }
+    ],
+    "link": {
+      "text": "View Specs",
+      "url": "#"
+    }
+  },
+  "keyboard": {
+    "title": "Keyboard",
+    "description": "A mechanical keyboard with custom switches. The tactile feedback and satisfying click makes coding a pleasure.",
+    "specs": [
+      {
+        "label": "Type",
+        "value": "Mechanical"
+      },
+      {
+        "label": "Switches",
+        "value": "Cherry MX Blue"
+      },
+      {
+        "label": "Layout",
+        "value": "Full Size"
+      },
+      {
+        "label": "Backlight",
+        "value": "RGB"
+      }
+    ],
+    "link": {
+      "text": "Learn More",
+      "url": "#"
+    }
+  },
+  "mouse": {
+    "title": "Mouse",
+    "description": "Precision gaming mouse with high DPI sensor. Perfect for both work and play, offering smooth tracking and customizable buttons.",
+    "specs": [
+      {
+        "label": "DPI",
+        "value": "16000"
+      },
+      {
+        "label": "Buttons",
+        "value": "6 Programmable"
+      },
+      {
+        "label": "Connection",
+        "value": "Wireless"
+      },
+      {
+        "label": "Battery Life",
+        "value": "70 hours"
+      }
+    ],
+    "link": {
+      "text": "View Details",
+      "url": "#"
+    }
+  },
+  "phone": {
+    "title": "Phone",
+    "description": "My mobile companion for staying connected. Always within reach for quick messages, calls, and inspiration on the go.",
+    "specs": [
+      {
+        "label": "Model",
+        "value": "Latest Flagship"
+      },
+      {
+        "label": "Storage",
+        "value": "256GB"
+      },
+      {
+        "label": "Camera",
+        "value": "Triple Lens"
+      },
+      {
+        "label": "Battery",
+        "value": "5000mAh"
+      }
+    ],
+    "link": {
+      "text": "Contact Me",
+      "url": "#"
+    }
+  },
+  "notebook": {
+    "title": "Notebook",
+    "description": "My trusty notebook for sketching ideas, taking notes, and brainstorming. Sometimes the best ideas start with pen and paper.",
+    "specs": [
+      {
+        "label": "Type",
+        "value": "Dotted Grid"
+      },
+      {
+        "label": "Pages",
+        "value": "240"
+      },
+      {
+        "label": "Size",
+        "value": "A5"
+      },
+      {
+        "label": "Cover",
+        "value": "Leather"
+      }
+    ],
+    "link": {
+      "text": "View Projects",
+      "url": "#"
+    }
+  },
+  "poster-1": {
+    "title": "Poster 1",
+    "description": "Minimalist design poster that inspires creativity. A reminder to keep pushing boundaries and think outside the box.",
+    "specs": [
+      {
+        "label": "Theme",
+        "value": "Abstract Art"
+      },
+      {
+        "label": "Size",
+        "value": "18x24 inches"
+      },
+      {
+        "label": "Frame",
+        "value": "Black Metal"
+      }
+    ],
+    "link": {
+      "text": "View Gallery",
+      "url": "#"
+    }
+  },
+  "poster-2": {
+    "title": "Poster 2",
+    "description": "Geometric patterns and bold colors. This poster represents structure and chaos working together in harmony.",
+    "specs": [
+      {
+        "label": "Theme",
+        "value": "Geometric"
+      },
+      {
+        "label": "Size",
+        "value": "18x24 inches"
+      },
+      {
+        "label": "Frame",
+        "value": "Black Metal"
+      }
+    ],
+    "link": {
+      "text": "View Collection",
+      "url": "#"
+    }
+  },
+  "poster-3": {
+    "title": "Poster 3",
+    "description": "Motivational typography design. A daily reminder to stay focused, work hard, and never stop learning.",
+    "specs": [
+      {
+        "label": "Theme",
+        "value": "Typography"
+      },
+      {
+        "label": "Size",
+        "value": "18x24 inches"
+      },
+      {
+        "label": "Frame",
+        "value": "Black Metal"
+      }
+    ],
+    "link": {
+      "text": "Read More",
+      "url": "#"
+    }
+  }
+}

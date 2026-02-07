@@ -16,12 +16,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Dependencies (if using npm later)
+# Dependencies
 node_modules/
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 
-# Build outputs (if adding build step later)
+# Build outputs
 dist/
 build/
 
