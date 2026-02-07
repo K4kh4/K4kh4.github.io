@@ -1,195 +1,215 @@
-# Three.js Interactive Desk Portfolio
+# K4kh4's Interactive 3D Portfolio
 
-A modern, interactive 3D desk workspace built with Three.js. Explore a virtual desk with clickable objects, hover effects, and detailed information modals.
+[![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white)](https://threejs.org/)
+[![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-## Features
+An immersive 3D portfolio website featuring an interactive desk scene where each object tells a story about my work - from web games to mobile apps, Steam releases to creative projects.
 
-- 🖥️ Interactive 3D desk scene with realistic objects
-- 🎯 Hover effects with outline highlighting
-- 💬 Tooltip that follows cursor showing object names
-- 📱 Click objects to open detailed information modals
-- 📝 Editable object data via JSON files
-- 🎨 Dynamic camera that follows mouse movement
-- 🌟 Realistic lighting and shadows
-- 🎯 Clean, modular architecture
+## ✨ Features
 
-## Project Structure
+- 🎮 **Interactive 3D Desk Scene** - Explore objects with hover effects and click interactions
+- 📱 **Responsive Design** - Works seamlessly on desktop and mobile
+- 🎬 **Smooth Animations** - GSAP-powered transitions and camera movements
+- 🎯 **Smart Object Detection** - Automatic categorization based on GLTF naming conventions
+- 📊 **Project Showcase** - Modals with detailed portfolio information
+- 💡 **Fun Interactions** - Toggle desk light, animated objects, and more
+- 🚀 **Optimized Performance** - Fast loading and smooth 60fps rendering
+
+## 🎯 Live Demo
+
+[View Live Portfolio →](https://k4kh4.github.io)
+
+## 🖼️ Preview
+
+*Coming soon - Add screenshots/GIFs of your portfolio in action*
+
+## 🏗️ Project Structure
 
 ```
-K4kh4.github.io/
-├── index.html              # Main HTML entry point
-├── styles/
-│   └── main.css           # Complete styling (tooltip, modal, animations)
-├── js/
-│   ├── main.js            # Application initialization & animation loop
-│   ├── scene/
-│   │   ├── Scene.js       # Scene setup
-│   │   ├── Camera.js      # Camera configuration
-│   │   ├── Renderer.js    # WebGL renderer setup
-│   │   └── Lights.js      # Lighting setup
-│   ├── objects/
-│   │   ├── Desk.js        # Main desk and layout
-│   │   ├── Monitor.js     # Monitor object
-│   │   ├── Keyboard.js    # Keyboard object
-│   │   ├── Mouse.js       # Mouse object
-│   │   ├── Phone.js       # Phone object
-│   │   ├── Notebook.js    # Notebook object
-│   │   └── Wall.js        # Wall with posters
-│   ├── interactions/
-│   │   └── InteractionManager.js  # Raycasting & hover effects
-│   ├── ui/
-│   │   └── UIManager.js   # Tooltip & modal management
-│   └── utils/
-│       └── helpers.js     # Utility functions
-├── data/
-│   └── objects.json       # Object details (EDIT THIS!)
-└── README.md              # This file
+📦 Portfolio
+├── 📁 public/
+│   └── 📁 models/          # GLTF 3D models
+├── 📁 data/
+│   └── portfolio.json      # Project data
+├── 📁 js/
+│   ├── main.js            # App entry point
+│   ├── 📁 scene/          # Three.js scene setup
+│   ├── 📁 loaders/        # GLTF loader
+│   ├── 📁 interactions/   # User interactions
+│   ├── 📁 animations/     # GSAP animations
+│   └── 📁 ui/             # UI management
+└── 📁 styles/
+    └── main.css           # Styling
 ```
 
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 16+ and npm
+- Node.js (v16 or higher)
+- npm or yarn
 
 ### Installation
 
-1. Clone or download this repository
-2. Install dependencies:
-
 ```bash
+# Clone the repository
+git clone https://github.com/K4kh4/K4kh4.github.io.git
+
+# Navigate to project directory
+cd K4kh4.github.io
+
+# Install dependencies
 npm install
-```
 
-### Development
-
-Start the development server with hot reload:
-
-```bash
+# Start development server
 npm run dev
 ```
 
-This will open the project at `http://localhost:3000` with automatic browser refresh on file changes.
+The site will be available at `http://localhost:5173`
 
 ### Build for Production
 
-Create an optimized production build:
-
 ```bash
+# Create production build
 npm run build
-```
 
-The built files will be in the `dist/` folder.
-
-### Preview Production Build
-
-Preview the production build locally:
-
-```bash
+# Preview production build
 npm run preview
 ```
 
-## Usage
+## 🎨 Customization
 
-- **Move Mouse**: Camera follows your cursor movement
-- **Hover Objects**: See object name in tooltip and outline effect
-- **Click Objects**: Open detailed information modal
-- **ESC Key**: Close modal
-- **Click Outside Modal**: Close modal
+### 1. Add Your 3D Scene
 
-## Customization
+Create your desk scene in Blender following the naming conventions:
 
-### Edit Object Details
+**Interactive Objects (Hover):**
+- `InteractiveKeyboard`
+- `InteractiveMouse`
+- `InteractiveMacMini`
 
-All object information is stored in `data/objects.json`. Edit this file to update:
-- Titles and descriptions
-- Specifications
-- Links
+**Clickable Objects (Portfolio):**
+- `ClickableMonitor` → Web Games
+- `ClickablePhone` → Mobile Games
+- `ClickableNotebook` → Other Projects
+- `ClickablePoster1` → Steam Game 1
+- `ClickablePoster2` → Steam Game 2
+- `ClickablePoster3` → Steam Game 3
+
+**Toggle Objects:**
+- `ToggleDeskLight` → Interactive light
+
+See `/public/models/README.md` for detailed GLTF setup instructions.
+
+### 2. Update Portfolio Content
+
+Edit `/data/portfolio.json` with your projects:
 
 ```json
 {
   "monitor": {
-    "title": "Monitor",
-    "description": "Your description here",
-    "specs": [
-      { "label": "Resolution", "value": "2560 x 1440" }
-    ],
-    "link": { "text": "View Specs", "url": "#" }
+    "category": "Web Games",
+    "projects": [
+      {
+        "title": "Your Game",
+        "description": "Game description",
+        "logo": "/assets/logo.png",
+        "tags": ["JavaScript", "WebGL"],
+        "link": "https://your-game.com"
+      }
+    ]
   }
 }
 ```
 
-### Colors
+### 3. Customize Styling
 
-Edit CSS variables in `styles/main.css`:
+Edit colors in `/styles/main.css`:
 
 ```css
 :root {
-  --color-primary: #00ff88;
-  --color-secondary: #0066ff;
+  --color-primary: #00ff88;    /* Accent color */
+  --color-secondary: #0066ff;  /* Secondary accent */
+  --color-bg: #121218;         /* Background */
 }
 ```
 
-### Camera Sensitivity
+## 🎮 Object Interaction System
 
-Adjust in `js/main.js`:
+The portfolio uses a smart naming-based interaction system:
 
-```javascript
-const targetX = app.mouse.x * 0.5;  // Change 0.5 to adjust horizontal sensitivity
-const targetY = -app.mouse.y * 0.3; // Change 0.3 to adjust vertical sensitivity
-```
+| Prefix | Behavior | Example |
+|--------|----------|---------|
+| `Interactive*` | Hover animation | Keyboard bounces |
+| `Clickable*` | Opens modal + zoom | Monitor shows web games |
+| `Toggle*` | On/off toggle | Desk light switches |
 
-### Object Positions
+## 📊 Tech Stack
 
-Edit object positions in `js/objects/Desk.js`:
+- **[Three.js](https://threejs.org/)** - 3D rendering engine
+- **[GSAP](https://greensock.com/)** - Professional-grade animations
+- **[Vite](https://vitejs.dev/)** - Lightning-fast build tool
+- **Vanilla JavaScript** - No framework bloat
 
-```javascript
-monitor.position.set(0, 0.05, -0.3);  // x, y, z coordinates
-```
+## 📁 Key Files
 
-## Browser Support
+| File | Purpose |
+|------|---------|
+| `/js/main.js` | Application initialization and event handling |
+| `/js/loaders/GLTFLoader.js` | Loads and parses GLTF scene |
+| `/js/interactions/InteractionManager.js` | Handles raycasting and hover effects |
+| `/js/animations/AnimationManager.js` | Manages all animations |
+| `/js/scene/CameraController.js` | Camera zoom and movement |
+| `/js/ui/UIManager.js` | Tooltip and modal management |
+| `/data/portfolio.json` | All portfolio project data |
 
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 15+
-- Opera 76+
+## 🎯 Roadmap
 
-Requires ES6 modules and WebGL support.
+- [ ] Add actual GLTF desk scene
+- [ ] Populate portfolio with real projects
+- [ ] Add sound effects for interactions
+- [ ] Implement loading progress bar
+- [ ] Add keyboard navigation
+- [ ] Create mobile-optimized camera controls
+- [ ] Add analytics tracking
+- [ ] Implement i18n for multiple languages
 
-## Performance
+## 🐛 Known Issues
 
-- Optimized for 60 FPS on modern devices
-- Adaptive pixel ratio for high-DPI displays
-- Efficient particle rendering with instancing
-- Damped controls for smooth interactions
+- Placeholder scene is currently used (waiting for custom GLTF)
+- Some project images are placeholders
+- Mobile performance needs optimization
 
-## License
+## 📝 Development Notes
 
-MIT License - Feel free to use this project for personal or commercial purposes.
+See `PROJECT_GUIDE.md` for detailed development documentation, including:
+- Complete project structure breakdown
+- GLTF object naming conventions
+- Data structure format
+- Customization guide
+- Troubleshooting tips
 
-## Interactive Objects
+## 🤝 Contributing
 
-The desk includes:
-- 🖥️ **Monitor** - Your main display
-- ⌨️ **Keyboard** - Mechanical keyboard
-- 🖱️ **Mouse** - Precision gaming mouse
-- 📱 **Phone** - Mobile device
-- 📓 **Notebook** - Paper notebook
-- 🖼️ **Posters** (3x) - Wall decorations
+This is a personal portfolio, but feel free to:
+- Report bugs via issues
+- Suggest improvements
+- Fork for your own portfolio
+- Star if you find it useful! ⭐
 
-All objects are clickable and have detailed information!
+## 📄 License
 
-## Credits
+MIT License - See LICENSE file for details
 
-- Built with [Three.js](https://threejs.org/)
-- Bundled with [Vite](https://vitejs.dev/)
-- Created by K4kh4
+## 🙏 Acknowledgments
 
-## Future Enhancements
+- Three.js community for amazing 3D engine
+- GSAP for smooth animations
+- Cursor AI for development assistance
 
-- [ ] Add GLTF model loading for more realistic objects
-- [ ] Implement post-processing effects (bloom, SSAO)
-- [ ] Add background music/ambient sounds
-- [ ] Create multiple desk themes
-- [ ] Add animated transitions between views
-- [ ] Implement touch controls for mobile
+---
+
+**Built with 💚 by K4kh4**
+
+[Portfolio](https://k4kh4.github.io) • [GitHub](https://github.com/K4kh4) • [Twitter](https://twitter.com/k4kh4)

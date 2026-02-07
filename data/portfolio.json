@@ -1,0 +1,204 @@
+{
+  "monitor": {
+    "id": "monitor",
+    "category": "Web Games",
+    "title": "Web Games Portfolio",
+    "description": "My collection of browser-based games and interactive experiences",
+    "projects": [
+      {
+        "id": "web-game-1",
+        "title": "Epic Web Adventure",
+        "description": "An immersive 2D platformer built with HTML5 Canvas and JavaScript. Features procedurally generated levels, custom physics engine, and multiplayer support.",
+        "logo": "/assets/placeholder-game-1.png",
+        "tags": ["JavaScript", "HTML5 Canvas", "WebGL", "Multiplayer"],
+        "link": "https://example.com/game1",
+        "github": "https://github.com/yourusername/game1"
+      },
+      {
+        "id": "web-game-2",
+        "title": "Puzzle Master",
+        "description": "Brain-teasing puzzle game with 100+ levels. Built with Three.js for stunning 3D visuals and smooth animations.",
+        "logo": "/assets/placeholder-game-2.png",
+        "tags": ["Three.js", "WebGL", "3D", "Puzzle"],
+        "link": "https://example.com/game2",
+        "github": "https://github.com/yourusername/game2"
+      },
+      {
+        "id": "web-game-3",
+        "title": "Space Shooter",
+        "description": "Fast-paced arcade shooter with power-ups, boss battles, and leaderboards. Optimized for high performance.",
+        "logo": "/assets/placeholder-game-3.png",
+        "tags": ["Phaser", "JavaScript", "Arcade", "High Score"],
+        "link": "https://example.com/game3",
+        "github": "https://github.com/yourusername/game3"
+      }
+    ]
+  },
+  "phone": {
+    "id": "phone",
+    "category": "Mobile Games",
+    "title": "Mobile Games Portfolio",
+    "description": "Touch-optimized games designed for iOS and Android platforms",
+    "projects": [
+      {
+        "id": "mobile-game-1",
+        "title": "Tap Adventure",
+        "description": "Addictive idle clicker game with progression system, upgrades, and achievements. Built with React Native.",
+        "logo": "/assets/placeholder-mobile-1.png",
+        "tags": ["React Native", "iOS", "Android", "Idle Game"],
+        "link": "https://apps.apple.com/game1",
+        "playStore": "https://play.google.com/store/game1"
+      },
+      {
+        "id": "mobile-game-2",
+        "title": "Match Mania",
+        "description": "Colorful match-3 puzzle game with over 500 levels, special power-ups, and daily challenges.",
+        "logo": "/assets/placeholder-mobile-2.png",
+        "tags": ["Unity", "C#", "Match-3", "Puzzle"],
+        "link": "https://apps.apple.com/game2",
+        "playStore": "https://play.google.com/store/game2"
+      }
+    ]
+  },
+  "poster-1": {
+    "id": "poster-1",
+    "category": "Steam Game",
+    "title": "Cyber Nexus",
+    "description": "A cyberpunk action RPG set in a dystopian future",
+    "projects": [
+      {
+        "id": "steam-game-1",
+        "title": "Cyber Nexus",
+        "description": "Immerse yourself in a neon-lit cyberpunk world where you play as a rogue hacker fighting against corrupt corporations. Features deep RPG mechanics, branching storylines, and intense combat.",
+        "logo": "/assets/placeholder-steam-1.png",
+        "tags": ["Unity", "C#", "RPG", "Cyberpunk", "Action"],
+        "link": "https://store.steampowered.com/app/game1",
+        "trailer": "https://youtube.com/watch?v=trailer1",
+        "releaseDate": "2024",
+        "features": [
+          "40+ hours of gameplay",
+          "Multiple endings based on choices",
+          "Advanced character customization",
+          "Real-time combat system",
+          "Original soundtrack"
+        ]
+      }
+    ]
+  },
+  "poster-2": {
+    "id": "poster-2",
+    "category": "Steam Game",
+    "title": "Mystic Realms",
+    "description": "A fantasy adventure game with magic and exploration",
+    "projects": [
+      {
+        "id": "steam-game-2",
+        "title": "Mystic Realms",
+        "description": "Embark on an epic fantasy journey through mystical lands filled with ancient magic, mysterious creatures, and forgotten legends. Master powerful spells and uncover the secrets of the realm.",
+        "logo": "/assets/placeholder-steam-2.png",
+        "tags": ["Unreal Engine", "C++", "Fantasy", "Adventure", "Magic"],
+        "link": "https://store.steampowered.com/app/game2",
+        "trailer": "https://youtube.com/watch?v=trailer2",
+        "releaseDate": "2024",
+        "features": [
+          "Open world exploration",
+          "50+ unique spells",
+          "Dynamic weather system",
+          "Crafting and alchemy",
+          "Co-op multiplayer"
+        ]
+      }
+    ]
+  },
+  "poster-3": {
+    "id": "poster-3",
+    "category": "Steam Game",
+    "title": "Void Station",
+    "description": "Survival horror in deep space",
+    "projects": [
+      {
+        "id": "steam-game-3",
+        "title": "Void Station",
+        "description": "Experience terror in the void of space as you try to survive aboard an abandoned space station. Manage limited resources, solve environmental puzzles, and uncover the dark secrets that led to the station's downfall.",
+        "logo": "/assets/placeholder-steam-3.png",
+        "tags": ["Unity", "Horror", "Survival", "Sci-Fi", "Atmospheric"],
+        "link": "https://store.steampowered.com/app/game3",
+        "trailer": "https://youtube.com/watch?v=trailer3",
+        "releaseDate": "2025",
+        "features": [
+          "Atmospheric horror experience",
+          "Resource management",
+          "Environmental storytelling",
+          "Multiple game endings",
+          "VR support"
+        ]
+      }
+    ]
+  },
+  "notebook": {
+    "id": "notebook",
+    "category": "Other Projects",
+    "title": "Creative Portfolio",
+    "description": "T-shirt designs, artwork, and other creative endeavors",
+    "projects": [
+      {
+        "id": "tshirt-design-1",
+        "title": "Retro Gaming Collection",
+        "description": "Series of t-shirt designs inspired by classic 8-bit and 16-bit games. Each design captures the nostalgia of gaming's golden age.",
+        "logo": "/assets/placeholder-tshirt-1.png",
+        "tags": ["Design", "Illustration", "Apparel", "Gaming"],
+        "link": "https://shop.example.com/retro-gaming",
+        "images": ["/assets/tshirt-1a.png", "/assets/tshirt-1b.png"]
+      },
+      {
+        "id": "artwork-1",
+        "title": "Digital Art Portfolio",
+        "description": "Collection of digital illustrations, character designs, and concept art created for various projects.",
+        "logo": "/assets/placeholder-art-1.png",
+        "tags": ["Digital Art", "Illustration", "Character Design"],
+        "link": "https://artstation.com/yourusername",
+        "images": ["/assets/art-1a.png", "/assets/art-1b.png"]
+      },
+      {
+        "id": "tshirt-design-2",
+        "title": "Minimalist Tech Series",
+        "description": "Clean, modern t-shirt designs featuring minimalist interpretations of technology and programming concepts.",
+        "logo": "/assets/placeholder-tshirt-2.png",
+        "tags": ["Design", "Minimalism", "Tech", "Apparel"],
+        "link": "https://shop.example.com/tech-series"
+      }
+    ]
+  },
+  "macmini": {
+    "id": "macmini",
+    "category": "About",
+    "title": "About My Setup",
+    "description": "The hardware that powers my creative work",
+    "interactive": "hover",
+    "hoverAnimation": "bounce"
+  },
+  "keyboard": {
+    "id": "keyboard",
+    "category": "About",
+    "title": "Keyboard",
+    "description": "Mechanical keyboard for coding",
+    "interactive": "hover",
+    "hoverAnimation": "bounce"
+  },
+  "mouse": {
+    "id": "mouse",
+    "category": "About",
+    "title": "Mouse",
+    "description": "Precision gaming mouse",
+    "interactive": "hover",
+    "hoverAnimation": "move"
+  },
+  "desklight": {
+    "id": "desklight",
+    "category": "Interactive",
+    "title": "Desk Light",
+    "description": "Click to toggle light",
+    "interactive": "toggle",
+    "clickable": true
+  }
+}

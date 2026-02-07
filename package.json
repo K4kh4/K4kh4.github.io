@@ -1,7 +1,7 @@
 {
   "name": "k4kh4-portfolio",
-  "version": "1.0.0",
-  "description": "Interactive 3D Globe Portfolio with Three.js",
+  "version": "2.0.0",
+  "description": "Interactive 3D Desk Portfolio with Three.js - Showcasing web games, mobile games, Steam games, and creative projects",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,8 +12,10 @@
     "threejs",
     "3d",
     "portfolio",
-    "globe",
-    "webgl"
+    "webgl",
+    "interactive",
+    "games",
+    "gltf"
   ],
   "author": "K4kh4",
   "license": "MIT",
@@ -21,6 +23,7 @@
     "vite": "^5.0.12"
   },
   "dependencies": {
+    "gsap": "^3.14.2",
     "three": "^0.161.0"
   }
 }

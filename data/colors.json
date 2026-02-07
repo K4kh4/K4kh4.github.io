@@ -1,0 +1,123 @@
+{
+  "theme": {
+    "name": "Default Theme",
+    "version": "1.0.0",
+    "description": "Default color scheme for the portfolio"
+  },
+  "colors": {
+    "primary": {
+      "main": "#BE3D2A",
+      "rgb": "190, 61, 42",
+      "description": "Primary accent color - used for highlights, borders, and interactive elements"
+    },
+    "secondary": {
+      "main": "#FFD460",
+      "rgb": "255, 212, 96",
+      "description": "Secondary accent color - used in gradients and secondary actions"
+    },
+    "background": {
+      "main": "#0C2C55",
+      "dark": "#0C2C55",
+      "light": "#0C2C55",
+      "gradient": {
+        "start": "#0C2C55",
+        "end": "#0C2C55"
+      },
+      "description": "Background colors for main scene and modals"
+    },
+    "text": {
+      "primary": "#EDEDCE",
+      "secondary": "#EDEDCE",
+      "description": "Text colors for content"
+    },
+    "ui": {
+      "dark": "#102E50",
+      "modalBorder": {
+        "color": "#BE3D2A",
+        "alpha": 0.3
+      },
+      "modalShadow": {
+        "color": "#BE3D2A",
+        "alpha": 0.1
+      },
+      "tooltip": {
+        "background": "rgba(0, 0, 0, 0.9)",
+        "border": "#BE3D2A"
+      },
+      "button": {
+        "background": {
+          "alpha": 0.1
+        },
+        "backgroundHover": {
+          "alpha": 0.2
+        },
+        "border": {
+          "alpha": 0.3
+        }
+      },
+      "card": {
+        "background": {
+          "alpha": 0.02
+        },
+        "backgroundHover": {
+          "alpha": 0.04
+        },
+        "border": {
+          "alpha": 0.2
+        },
+        "borderHover": {
+          "alpha": 0.4
+        }
+      },
+      "tag": {
+        "background": {
+          "alpha": 0.1
+        },
+        "border": {
+          "alpha": 0.3
+        }
+      },
+      "scrollbar": {
+        "track": "rgba(255, 255, 255, 0.05)",
+        "thumb": "#BE3D2A",
+        "thumbHover": "#0066ff"
+      },
+      "closeButton": {
+        "background": "rgba(255, 255, 255, 0.05)",
+        "backgroundHover": "rgba(255, 255, 255, 0.1)"
+      },
+      "divider": "rgba(255, 255, 255, 0.1)",
+      "specItem": {
+        "background": "rgba(255, 255, 255, 0.03)"
+      }
+    },
+    "effects": {
+      "shadow": {
+        "modal": "-20px 0 60px rgba(0, 255, 136, 0.1)",
+        "button": "0 10px 20px rgba(0, 255, 136, 0.3)"
+      },
+      "blur": "10px"
+    }
+  },
+  "threejs": {
+    "scene": {
+      "background": "#121218",
+      "fog": {
+        "color": "#121218",
+        "near": 8,
+        "far": 20
+      }
+    },
+    "objects": {
+      "outline": {
+        "color": "#BE3D2A",
+        "description": "Outline color for interactive objects on hover"
+      }
+    }
+  },
+  "notes": {
+    "usage": "Import this file in your application to apply these colors dynamically",
+    "customization": "Edit these values to change the entire theme",
+    "cssVariables": "These map to CSS custom properties in main.css"
+  }
+}

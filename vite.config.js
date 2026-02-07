@@ -3,9 +3,9 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: './',
   base: './',
-  publicDir: 'assets',
+  publicDir: 'public',
   server: {
-    port: 3000,
+    port: 5173,
     open: true,
     cors: true,
   },
@@ -18,11 +18,12 @@ export default defineConfig({
       output: {
         manualChunks: {
           'three': ['three'],
+          'gsap': ['gsap'],
         },
       },
     },
   },
   optimizeDeps: {
-    include: ['three'],
+    include: ['three', 'gsap'],
   },
 });
