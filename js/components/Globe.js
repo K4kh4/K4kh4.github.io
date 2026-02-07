@@ -86,15 +86,6 @@ function createLatLonLines() {
     const circleRadius = Math.cos(lat) * radius;
     const y = Math.sin(lat) * radius;
 
-    const geometry = new THREE.CircleGeometry(circleRadius, segments);
-    geometry.vertices.shift(); // Remove center vertex
-    
-    const material = new THREE.LineBasicMaterial({
-      color: 0x00ff88,
-      transparent: true,
-      opacity: 0.15,
-    });
-
     const points = [];
     for (let j = 0; j <= segments; j++) {
       const angle = (j / segments) * Math.PI * 2;
@@ -108,6 +99,11 @@ function createLatLonLines() {
     }
 
     const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+    const material = new THREE.LineBasicMaterial({
+      color: 0x00ff88,
+      transparent: true,
+      opacity: 0.15,
+    });
     const line = new THREE.Line(lineGeometry, material);
     group.add(line);
   }
