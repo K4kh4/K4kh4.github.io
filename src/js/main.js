@@ -64,10 +64,10 @@ async function init() {
 
   // Load desk scene
   try {
-    // Try to load actual GLTF file
-    // For now, use placeholder scene
-    console.log('📦 Loading desk scene...');
-    app.deskObjects = app.sceneLoader.createPlaceholderScene();
+    console.log('📦 Loading desk scene from GLTF...');
+    
+    // Load the actual scene.glb file
+    app.deskObjects = await app.sceneLoader.load('/models/scene.glb');
     app.scene.add(app.deskObjects.scene);
     
     // Setup shadows
@@ -97,6 +97,7 @@ async function init() {
     console.error('❌ Failed to load scene:', error);
     
     // Fallback to placeholder
+    console.log('⚠️ Using placeholder scene as fallback');
     app.deskObjects = app.sceneLoader.createPlaceholderScene();
     app.scene.add(app.deskObjects.scene);
     

@@ -48,12 +48,12 @@
     "projects": [
       {
         "id": "mobile-game-1",
-        "title": "Tap Adventure",
-        "description": "Addictive idle clicker game with progression system, upgrades, and achievements. Built with React Native.",
-        "logo": "/assets/placeholder-mobile-1.png",
-        "tags": ["React Native", "iOS", "Android", "Idle Game"],
+        "title": "Synergy!",
+        "description": "Play through different Planets and defend the bases from the enemies! Swipe to roll and release to crouch to take advantage of the battle! Upgrade your Hero to get stronger and find cool Weapons and Gear!",
+        "logo": "/assets/synergy.webp",
+        "tags": ["Unity", "C#",  "PvE"],
         "link": "https://apps.apple.com/game1",
-        "playStore": "https://play.google.com/store/game1"
+        "playStore": "https://apps.apple.com/mk/app/synergy/id1622045516"
       },
       {
         "id": "mobile-game-2",
