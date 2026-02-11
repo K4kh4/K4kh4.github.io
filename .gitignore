@@ -23,8 +23,14 @@ pnpm-lock.yaml
 # package-lock.json should be committed for reproducible builds in CI/CD
 
 # Build outputs
-# dist/ - Keeping dist for GitHub Pages deployment
 build/
+# Built files in root (these ARE committed for GitHub Pages)
+# /index.html - built file
+# /assets/ - built files
+# /data/ - built files
+
+# Keep dist folder for reference but don't use it
+dist/
 
 # Environment variables
 .env

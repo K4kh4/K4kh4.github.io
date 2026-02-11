@@ -3,18 +3,18 @@ import { copyFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
 export default defineConfig({
-  root: './',
+  root: './src',
   base: './',
-  publicDir: 'public',
+  publicDir: '../public',
   server: {
     port: 5173,
     open: true,
     cors: true,
   },
   build: {
-    outDir: 'dist',
+    outDir: '../',
     assetsDir: 'assets',
-    emptyOutDir: true,
+    emptyOutDir: false, // Don't delete everything in root
     sourcemap: false,
     rollupOptions: {
       output: {
@@ -32,10 +32,10 @@ export default defineConfig({
     {
       name: 'copy-data',
       closeBundle() {
-        // Copy data folder to dist
-        mkdirSync('dist/data', { recursive: true });
-        copyFileSync('data/colors.json', 'dist/data/colors.json');
-        copyFileSync('data/portfolio.json', 'dist/data/portfolio.json');
+        // Copy data folder to root
+        mkdirSync('data', { recursive: true });
+        copyFileSync('src/data/colors.json', 'data/colors.json');
+        copyFileSync('src/data/portfolio.json', 'data/portfolio.json');
       }
     }
   ]
