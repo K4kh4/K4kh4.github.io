@@ -1,5 +1,5 @@
 {
-  "monitor": {
+ "monitor": {
     "id": "monitor",
     "category": "Web Games",
     "title": "Web Games Portfolio",
@@ -7,30 +7,36 @@
     "projects": [
       {
         "id": "web-game-1",
-        "title": "Epic Web Adventure",
-        "description": "An immersive 2D platformer built with HTML5 Canvas and JavaScript. Features procedurally generated levels, custom physics engine, and multiplayer support.",
-        "logo": "/assets/placeholder-game-1.png",
-        "tags": ["JavaScript", "HTML5 Canvas", "WebGL", "Multiplayer"],
-        "link": "https://example.com/game1",
-        "github": "https://github.com/yourusername/game1"
+        "title": "Dash'n'Stash",
+        "description": "Loot, fight, and escape in a brand-new casual extraction shooter! Snatch gold, fend off real-time PvP attackers, and defend your base from ruthless raiders. Will you outsmart them all?",
+        "logo": "/assets/dns.webp",
+        "tags": ["Unity", "C#", "Multiplayer", "Casual", "Extraction", "Shooter"],
+        "link": "https://www.hyve.gg/game/dash-n-stash"
       },
       {
         "id": "web-game-2",
-        "title": "Puzzle Master",
-        "description": "Brain-teasing puzzle game with 100+ levels. Built with Three.js for stunning 3D visuals and smooth animations.",
-        "logo": "/assets/placeholder-game-2.png",
-        "tags": ["Three.js", "WebGL", "3D", "Puzzle"],
-        "link": "https://example.com/game2",
-        "github": "https://github.com/yourusername/game2"
+        "title": "BitByte",
+        "description": "Grow, outplay, and dominate in a high-stakes battles for real rewards. Follow our socials for upcoming pot announcements!",
+        "logo": "/assets/bb.webp",
+        "tags": ["Unity", "C#", "Multiplayer", "Battle Royale", "PvP", "Rewards"],
+        "link": "https://www.hyve.gg/game/bitbyte"
+      
       },
       {
         "id": "web-game-3",
-        "title": "Space Shooter",
-        "description": "Fast-paced arcade shooter with power-ups, boss battles, and leaderboards. Optimized for high performance.",
-        "logo": "/assets/placeholder-game-3.png",
+        "title": "Blasting Gumballs",
+        "description": "Blast gumballs to destroy donuts and maximize your score!.",
+        "logo": "/assets/bg.webp",
         "tags": ["Phaser", "JavaScript", "Arcade", "High Score"],
-        "link": "https://example.com/game3",
-        "github": "https://github.com/yourusername/game3"
+        "link": "https://www.hyve.gg/game/blasting-gumballs"
+      },
+      {
+        "id": "web-game-4",
+        "title": "We are Mafia",
+        "description": "Build your criminal empire and defend your turf in this strategic tower defense game!",
+        "logo": "/assets/wam.webp",
+        "tags": ["Phaser", "JavaScript", "Tower Defense", "Strategy"],
+        "link": "https://www.hyve.gg/game/we-are-mafia"
       }
     ]
   },
