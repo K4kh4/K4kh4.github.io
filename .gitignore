@@ -23,7 +23,7 @@ yarn.lock
 pnpm-lock.yaml
 
 # Build outputs
-dist/
+# dist/ - Keeping dist for GitHub Pages deployment
 build/
 
 # Environment variables

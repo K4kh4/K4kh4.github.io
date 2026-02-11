@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive 3D Desk Portfolio">
+  <title>K4kh4's Portfolio</title>
+  <script type="module" crossorigin src="./assets/index-BRP2m9SR.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-B6cECddp.js">
+  <link rel="modulepreload" crossorigin href="./assets/gsap-C8pce-KX.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-DaEzzBTG.css">
+</head>
+<body>
+  <!-- Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- Tooltip that follows cursor -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <!-- Modal for object details -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-body-wrapper">
+        <div id="modal-body"></div>
+      </div>
+      <div class="modal-navigation">
+        <button class="modal-nav-button" id="modal-prev">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          Previous
+        </button>
+        <button class="modal-nav-button" id="modal-next">
+          Next
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader"></div>
+    <p class="loading-text">Loading Experience...</p>
+  </div>
+
+  <!-- Main Application -->
+</body>
+</html>

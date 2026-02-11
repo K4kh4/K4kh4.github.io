@@ -1,4 +1,6 @@
 import { defineConfig } from 'vite';
+import { copyFileSync, mkdirSync } from 'fs';
+import { join } from 'path';
 
 export default defineConfig({
   root: './',
@@ -26,4 +28,15 @@ export default defineConfig({
   optimizeDeps: {
     include: ['three', 'gsap'],
   },
+  plugins: [
+    {
+      name: 'copy-data',
+      closeBundle() {
+        // Copy data folder to dist
+        mkdirSync('dist/data', { recursive: true });
+        copyFileSync('data/colors.json', 'dist/data/colors.json');
+        copyFileSync('data/portfolio.json', 'dist/data/portfolio.json');
+      }
+    }
+  ]
 });
