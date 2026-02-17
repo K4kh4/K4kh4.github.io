@@ -37,37 +37,37 @@ const CAMERA_OFFSETS = {
   'monitor': {
     offset: new THREE.Vector3(.5, 0.7,1.5),  // Shifted left
     duration: 1,
-    ease: 'power2.inOut'
+    ease: 'back.inOut'
   },
   'phone': {
-    offset: new THREE.Vector3(-1.5, 1, 2),    // Shifted left
+    offset: new THREE.Vector3(.5, 1, 2),    // Shifted left
     duration: 1,
-    ease: 'power2.inOut'
+    ease: 'back.inOut'
   },
   'notebook': {
-    offset: new THREE.Vector3(-1.5, 1.5, 2),  // Shifted left
+    offset: new THREE.Vector3(.5, 1.5, 2),  // Shifted left
     duration: 1,
-    ease: 'power2.inOut'
+    ease: 'back.inOut'
   },
   'poster-1': {
-    offset: new THREE.Vector3(-2, 0, 3.5),    // Shifted left
+    offset: new THREE.Vector3(0, 0, 3.5),    // Shifted left
     duration: 1,
-    ease: 'power2.inOut'
+    ease: 'back.inOut'
   },
   'poster-2': {
-    offset: new THREE.Vector3(-2, 0, 3.5),    // Shifted left
+    offset: new THREE.Vector3(0, 0, 3.5),    // Shifted left
     duration: 1,
-    ease: 'power2.inOut'
+    ease: 'back.inOut'
   },
   'poster-3': {
-    offset: new THREE.Vector3(-2, 0, 3.5),    // Shifted left
+    offset: new THREE.Vector3(0, 0, 3.5),    // Shifted left
     duration: 1,
-    ease: 'power2.inOut'
+    ease: 'back.inOut'
   },
   'desklight': {
-    offset: new THREE.Vector3(-1.5, 1, 2),    // Shifted left
+    offset: new THREE.Vector3(.5, 1, 2),    // Shifted left
     duration: 1,
-    ease: 'power2.inOut'
+    ease: 'back.inOut'
   },
   // Default for any other object
   'default': {
