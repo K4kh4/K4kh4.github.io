@@ -39,7 +39,7 @@ Edit `/data/colors.json`:
 
 ```json
 "primary": {
-  "main": "#00ff88",              // Main accent color
+  "main": "#FFCC7A",              // Main accent color
   "rgb": "0, 255, 136",           // RGB values for alpha blending
   "description": "Primary accent color"
 }

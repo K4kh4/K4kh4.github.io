@@ -7,6 +7,26 @@ import * as THREE from 'three';
 import { gsap } from 'gsap';
 
 // ========================================
+// CAMERA ROTATION LIMITS
+// Edit these values to control how far the camera can rotate
+// Values are in screen space units (0 to 1 range from mouse position)
+// ========================================
+const ROTATION_LIMITS = {
+  // Horizontal rotation limits (left/right)
+  horizontal: {
+    min: -0.1,  // Maximum rotation to the left
+    max: 0.1    // Maximum rotation to the right
+  },
+  // Vertical rotation limits (up/down)
+  vertical: {
+    min: 0,  // Maximum rotation downward
+    max: 0.2    // Maximum rotation upward
+  },
+  // Rotation speed multiplier (how much mouse movement affects camera)
+  sensitivity: 0.3
+};
+
+// ========================================
 // CAMERA OFFSET CONFIGURATION
 // Edit these values to adjust camera position for each object
 // Positive X = right, Negative X = left
@@ -15,7 +35,7 @@ import { gsap } from 'gsap';
 // ========================================
 const CAMERA_OFFSETS = {
   'monitor': {
-    offset: new THREE.Vector3(-2, 0.5, 2.5),  // Shifted left
+    offset: new THREE.Vector3(.5, 0.7,1.5),  // Shifted left
     duration: 1,
     ease: 'power2.inOut'
   },
@@ -63,7 +83,7 @@ export class CameraController {
     this.scene = scene;
     
     // Default camera position
-    this.defaultPosition = new THREE.Vector3(0, 2, 4);
+    this.defaultPosition = new THREE.Vector3(0, 1.2, 1.25);
     this.defaultTarget = new THREE.Vector3(0, 1, 0);
     
     // Current state
@@ -81,6 +101,7 @@ export class CameraController {
   init() {
     this.camera.position.copy(this.defaultPosition);
     this.camera.lookAt(this.defaultTarget);
+    this.camera.fov = 31;
   }
 
   /**
@@ -182,9 +203,20 @@ export class CameraController {
   update(mouseX, mouseY) {
     if (this.isZoomed) return;
 
-    const targetX = -mouseX * 0.7;
-    const targetY = -mouseY * 0.5;
+    // Apply rotation limits and sensitivity
+    const targetX = THREE.MathUtils.clamp(
+      -mouseX * ROTATION_LIMITS.sensitivity,
+      ROTATION_LIMITS.horizontal.min,
+      ROTATION_LIMITS.horizontal.max
+    );
     
+    const targetY = THREE.MathUtils.clamp(
+      -mouseY * ROTATION_LIMITS.sensitivity,
+      ROTATION_LIMITS.vertical.min,
+      ROTATION_LIMITS.vertical.max
+    );
+
+    // Smoothly interpolate camera position
     this.camera.position.x += (targetX - this.camera.position.x + this.defaultPosition.x) * 0.05;
     this.camera.position.y += (targetY - this.camera.position.y + this.defaultPosition.y) * 0.05;
     this.camera.lookAt(this.currentTarget);

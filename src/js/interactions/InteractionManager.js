@@ -132,12 +132,12 @@ export class InteractionManager {
     const id = object.userData.id;
     
     if (id === 'keyboard' || id === 'macmini') {
-      return 'bounce';
+      return 'scale';
     } else if (id === 'mouse') {
-      return 'move';
+      return 'scale';
     }
     
-    return 'bounce';
+    return 'scale';
   }
 
   /**
@@ -155,8 +155,9 @@ export class InteractionManager {
         // Create outline
         const outlineGeometry = child.geometry.clone();
         const outlineMesh = new THREE.Mesh(outlineGeometry, this.outlineMaterial);
-        outlineMesh.scale.multiplyScalar(1.05);
+        outlineMesh.scale.multiplyScalar(1.01);
         outlineMesh.userData.isOutline = true;
+        outlineMesh.position.y = 0.001;
         child.add(outlineMesh);
       }
     });

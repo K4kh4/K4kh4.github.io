@@ -17,7 +17,7 @@ export class AnimationManager {
    * @param {THREE.Object3D} object - The object to animate
    * @param {string} animationType - Type of animation (bounce, move, etc.)
    */
-  playHoverAnimation(object, animationType = 'bounce') {
+  playHoverAnimation(object, animationType = 'scale') {
     if (this.hoveredObjects.has(object)) return;
     
     this.hoveredObjects.add(object);
@@ -65,7 +65,7 @@ export class AnimationManager {
         y: object.userData.originalPosition.y,
         z: object.userData.originalPosition.z,
         duration: 0.3,
-        ease: 'back.out(1.7)'
+        ease: "back.out(1.7)"
       });
     }
 
@@ -74,7 +74,7 @@ export class AnimationManager {
       y: 1,
       z: 1,
       duration: 0.3,
-      ease: 'back.out(1.7)'
+      ease: "back.out(1.7)"
     });
   }
 
@@ -87,7 +87,7 @@ export class AnimationManager {
     timeline.to(object.position, {
       y: object.userData.originalPosition.y + 0.1,
       duration: 0.6,
-      ease: 'back.out(1.7)'
+      ease: 'back.out(2.7)'
     });
 
     this.activeAnimations.set(key, timeline);
@@ -115,11 +115,11 @@ export class AnimationManager {
     const timeline = gsap.timeline();
     
     timeline.to(object.scale, {
-      x: 1.1,
-      y: 1.1,
-      z: 1.1,
-      duration: 0.3,
-      ease: 'back.out(1.7)'
+      x: 1.25,
+      y: 1.25,
+      z: 1.25,
+      duration: 0.5,
+      ease: "back.Out(1.7)"
     });
 
     this.activeAnimations.set(key, timeline);
